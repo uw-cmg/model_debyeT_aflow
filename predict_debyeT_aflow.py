@@ -10,7 +10,7 @@ def get_preds_ebars_domains(df_test):
     scaler = joblib.load(os.path.join(d, 'StandardScaler.pkl'))
     model = joblib.load(os.path.join(d, 'RandomForestRegressor.pkl'))
     df_features = pd.read_csv(os.path.join(d, 'X_train.csv'))
-    recal_params = pd.read_csv(os.path.join(d, 'recalibration_parameters_average_test.csv'))
+    recal_params = pd.read_csv(os.path.join(d, 'recal_dict.csv'))
 
     features = df_features.columns.tolist()
     df_test = df_test[features]
